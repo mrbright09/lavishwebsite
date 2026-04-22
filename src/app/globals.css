@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Pink drip effect used at section tops/bottoms */
+.drip-top {
+  background-image: url("/images/drip-pink.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 40px;
+  padding-top: 40px;
+}
+
+.drip-bottom {
+  background-image: url("/images/drip-pink.svg");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: auto 40px;
+  padding-bottom: 40px;
+  transform: scaleY(-1);
+}
+
+/* Gold divider line */
+.gold-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+}
+
+/* Script italic for taglines */
+.font-script-italic {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-weight: 400;
+}
