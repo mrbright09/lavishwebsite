@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lavish Sacred Buns & Sweets
+
+Official website for **Lavish Sacred Buns & Sweets** — handcrafted cinnamon rolls, gourmet cookies, and luxury sweets. Based in Birmingham, AL.
+
+## Stack
+
+- **Next.js 16** (App Router)
+- **Tailwind CSS v4**
+- **TypeScript**
+- **Lucide React** icons
+- **Google Fonts** — Playfair Display, Cormorant Garamond, DM Sans
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    page.tsx          # Homepage — assembles all sections
+    layout.tsx        # Root layout + Google Fonts
+    globals.css       # Brand utility classes (drip, gold divider, font-script-italic)
+  components/
+    Navbar.tsx        # Sticky nav with badge logo + mobile hamburger
+    HeroSection.tsx   # Full-bleed hero with floating product image
+    FeatureStrip.tsx  # Handcrafted Daily / Luxury Flavors / Perfect for Every Occasion
+    SignatureCreations.tsx  # 5 flavor cards with pink labels
+    BrandStory.tsx    # "More Than Just a Treat" split layout
+    InstagramGallery.tsx   # 6-photo gallery + @LAVISHSACREDBUNS
+    CTASection.tsx    # "Ready to Indulge?" full-bleed CTA
+    Footer.tsx        # Logo, nav, contact info, social icons
+  lib/
+    menu-data.ts      # Flavor list with names and image paths
+public/
+  images/            # Product photography goes here
+```
 
-## Learn More
+## Adding Real Photos
 
-To learn more about Next.js, take a look at the following resources:
+Drop your product images into `public/images/` using these filenames:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| File | Section |
+|------|---------|
+| `hero-roll.png` | Hero — large featured roll |
+| `roll-strawberry.png` | Strawberry Glaze card |
+| `roll-biscoff.png` | Biscoff Dream card |
+| `roll-pecan.png` | Pecan Caramel card |
+| `roll-redvelvet.png` | Red Velvet Indulgence card |
+| `roll-cookies.png` | Cookies & Cream card |
+| `brand-box.png` | Brand Story section |
+| `gallery-1.png` → `gallery-6.png` | Instagram gallery |
+| `cta-bg.png` | CTA section background |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Brand Colors
 
-## Deploy on Vercel
+| Token | Hex |
+|-------|-----|
+| `pink-blush` | `#FDE8ED` |
+| `pink-light` | `#F9C8D5` |
+| `pink-brand` | `#D4567A` |
+| `pink-deep` | `#B83060` |
+| `gold` | `#C9A84C` |
+| `cream` | `#FFF5F7` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📞 334-349-1193 · 📍 Birmingham, AL
