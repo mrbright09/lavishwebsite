@@ -54,7 +54,8 @@ export default function CTASection() {
           />
           {/* Drip overlay at top of image */}
           <div className="absolute top-0 inset-x-0 z-10">
-            <img src="/images/drip-pink.svg" alt="" className="w-full" aria-hidden="true" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/drip-pink.svg`} alt="" className="w-full" aria-hidden="true" />
           </div>
         </div>
       </div>
