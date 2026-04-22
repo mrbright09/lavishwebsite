@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -13,27 +14,13 @@ function InstagramIcon({ className }: { className?: string }) {
 function FooterLogo() {
   return (
     <div className="flex flex-col items-center select-none">
-      <div className="relative border border-gold px-6 py-2 flex flex-col items-center gap-0.5" style={{ minWidth: 160 }}>
-        <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-gold text-[10px] leading-none">✦</span>
-        <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-gold text-[10px] leading-none">✦</span>
-        <svg viewBox="0 0 24 12" className="w-7 h-3.5 text-gold fill-gold mb-0.5" aria-hidden>
-          <path d="M0 12 L3 3 L7 8 L12 0 L17 8 L21 3 L24 12 Z" />
-        </svg>
-        <span className="text-pink-deep leading-none" style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontWeight: 400, fontSize: "1.25rem" }}>
-          Lavish
-        </span>
-        <div className="w-full h-px bg-gold opacity-60 my-0.5" />
-        <span className="text-gray-700 tracking-[0.2em] leading-none font-black text-[0.65rem] uppercase" style={{ fontFamily: "var(--font-playfair)" }}>
-          SACRED
-        </span>
-        <div className="w-full h-px bg-gold opacity-60 my-0.5" />
-        <span className="font-sans text-[7px] tracking-widest uppercase text-gray-400 leading-none">
-          BUNS &amp; SWEETS
-        </span>
-      </div>
-      <p className="text-gray-400 text-sm mt-3" style={{ fontFamily: "var(--font-cormorant)", fontStyle: "italic" }}>
-        &ldquo;Lord, this is good.&rdquo;
-      </p>
+      <Image
+        src="/images/lavishlogo.png"
+        alt="Lavish Sacred Buns & Sweets"
+        width={180}
+        height={120}
+        className="object-contain"
+      />
     </div>
   );
 }

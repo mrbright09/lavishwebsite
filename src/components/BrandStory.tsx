@@ -9,7 +9,7 @@ export default function BrandStory() {
         <div className="relative flex justify-center">
           <div className="relative">
             <Image
-              src="/images/brand-box.png"
+              src="/images/brand-box.jpg"
               alt="Lavish Sacred buns in a luxury gift box"
               width={520}
               height={520}
