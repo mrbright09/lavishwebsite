@@ -10,6 +10,16 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
+      {/* Pink drip bar — very top of page */}
+      <div
+        className="w-full h-10 bg-pink-light"
+        style={{
+          backgroundImage: "url('/images/drip-pink.svg')",
+          backgroundRepeat: "repeat-x",
+          backgroundPosition: "bottom center",
+          backgroundSize: "auto 40px",
+        }}
+      />
       <Navbar />
       <HeroSection />
       <FeatureStrip />
