@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Img";
 import { ArrowRight, Heart } from "lucide-react";
 import { flavors } from "@/lib/menu-data";
 

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/Img";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
