@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Heart } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -24,19 +25,25 @@ export default function InstagramGallery() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8">
         {/* Header */}
-        <div className="text-center flex flex-col gap-2">
-          <p className="font-sans text-xs tracking-widest uppercase text-gray-500">
+        <div className="text-center flex flex-col items-center gap-3">
+          <p className="font-sans text-xs tracking-widest uppercase text-gray-400">
             MADE TO SHARE. MADE TO CRAVE.
           </p>
           <a
             href="https://instagram.com/lavishsacredbuns"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-black text-3xl md:text-4xl text-pink-brand hover:text-pink-deep transition-colors"
+            className="font-black text-3xl md:text-5xl text-pink-brand hover:text-pink-deep transition-colors tracking-wide"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             @LAVISHSACREDBUNS
           </a>
+          {/* Gold divider with heart */}
+          <div className="flex items-center gap-3 w-48">
+            <div className="gold-divider flex-1" />
+            <Heart className="w-3.5 h-3.5 text-gold fill-gold flex-shrink-0" />
+            <div className="gold-divider flex-1" />
+          </div>
         </div>
 
         {/* Gallery grid */}
@@ -44,14 +51,14 @@ export default function InstagramGallery() {
           {galleryImages.map((img) => (
             <div
               key={img.src}
-              className="relative flex-shrink-0 w-40 lg:w-auto rounded-lg overflow-hidden cursor-pointer group"
+              className="relative flex-shrink-0 w-40 lg:w-auto rounded-xl overflow-hidden cursor-pointer group"
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 width={400}
                 height={400}
-                className="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.02]"
+                className="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90 group-hover:scale-[1.03]"
               />
             </div>
           ))}
