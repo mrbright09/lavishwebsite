@@ -47,7 +47,7 @@ export default function CTASection() {
         {/* Right: full-height image */}
         <div className="relative min-h-[360px] lg:min-h-full">
           <Image
-            src="/images/cta-bg.png"
+            src="/images/cta-bg.jpg"
             alt="Lavish Sacred luxury sweets"
             fill
             className="object-cover"

@@ -12,12 +12,12 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const galleryImages = [
-  { src: "/images/gallery-1.png", alt: "Lavish Sacred gallery 1" },
-  { src: "/images/gallery-2.png", alt: "Lavish Sacred gallery 2" },
-  { src: "/images/gallery-3.png", alt: "Lavish Sacred gallery 3" },
-  { src: "/images/gallery-4.png", alt: "Lavish Sacred gallery 4" },
-  { src: "/images/gallery-5.png", alt: "Lavish Sacred gallery 5" },
-  { src: "/images/gallery-6.png", alt: "Lavish Sacred gallery 6" },
+  { src: "/images/gallery-1.jpg", alt: "Lavish Sacred gallery 1" },
+  { src: "/images/gallery-2.jpg", alt: "Lavish Sacred gallery 2" },
+  { src: "/images/gallery-3.jpg", alt: "Lavish Sacred gallery 3" },
+  { src: "/images/gallery-4.jpg", alt: "Lavish Sacred gallery 4" },
+  { src: "/images/gallery-5.jpg", alt: "Lavish Sacred gallery 5" },
+  { src: "/images/gallery-6.jpg", alt: "Lavish Sacred gallery 6" },
 ];
 
 export default function InstagramGallery() {

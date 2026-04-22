@@ -1,56 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ShoppingCart, Menu, X } from "lucide-react";
 
 const navLeft = ["HOME", "MENU", "GALLERY"];
 const navRight = ["ORDER", "ABOUT", "CONTACT"];
-
-function BadgeLogo() {
-  return (
-    <div className="flex flex-col items-center select-none">
-      {/* Outer badge frame */}
-      <div className="relative border border-gold px-5 py-2 flex flex-col items-center gap-0.5"
-        style={{ minWidth: 140 }}>
-        {/* Corner decorations */}
-        <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-gold text-[10px] leading-none">✦</span>
-        <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 text-gold text-[10px] leading-none">✦</span>
-
-        {/* Crown */}
-        <svg viewBox="0 0 24 12" className="w-6 h-3 text-gold fill-gold mb-0.5" aria-hidden>
-          <path d="M0 12 L3 3 L7 8 L12 0 L17 8 L21 3 L24 12 Z" />
-        </svg>
-
-        {/* Lavish — italic script */}
-        <span
-          className="text-pink-deep leading-none"
-          style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontWeight: 400, fontSize: "1.1rem" }}
-        >
-          Lavish
-        </span>
-
-        {/* Thin gold rule */}
-        <div className="w-full h-px bg-gold opacity-60 my-0.5" />
-
-        {/* SACRED */}
-        <span
-          className="text-gray-800 tracking-[0.2em] leading-none font-black text-[0.7rem] uppercase"
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
-          SACRED
-        </span>
-
-        {/* Thin gold rule */}
-        <div className="w-full h-px bg-gold opacity-60 my-0.5" />
-
-        {/* BUNS & SWEETS */}
-        <span className="font-sans text-[8px] tracking-widest uppercase text-gray-500 leading-none">
-          BUNS &amp; SWEETS
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -71,8 +26,17 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Center badge logo */}
-        <BadgeLogo />
+        {/* Center logo */}
+        <a href="#" className="flex items-center select-none">
+          <Image
+            src="/images/Logolavish2.png"
+            alt="Lavish Sacred Buns & Sweets"
+            width={90}
+            height={90}
+            className="object-contain"
+            priority
+          />
+        </a>
 
         {/* Right nav + CTA */}
         <div className="hidden md:flex items-center gap-6">

@@ -93,7 +93,7 @@ export default function HeroSection() {
           </div>
 
           <Image
-            src="/images/hero-roll.png"
+            src="/images/hero-roll.jpg"
             alt="Lavish Sacred signature cinnamon roll"
             fill
             className="object-cover animate-float"
