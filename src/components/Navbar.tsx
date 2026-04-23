@@ -12,9 +12,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        {/* Left nav */}
-        <nav className="hidden md:flex gap-8">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center relative">
+        {/* Left nav — desktop only */}
+        <nav className="hidden md:flex gap-8 flex-1">
           {navLeft.map((link) => (
             <a
               key={link}
@@ -26,20 +26,22 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Center logo */}
-        <a href="#" className="flex items-center select-none">
-          <Image
-            src="/images/Logolavish2.png"
-            alt="Lavish Sacred Buns & Sweets"
-            width={90}
-            height={90}
-            className="object-contain"
-            priority
-          />
-        </a>
+        {/* Center logo — always centered */}
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <a href="#">
+            <Image
+              src="/images/Logolavish2.png"
+              alt="Lavish Sacred Buns & Sweets"
+              width={90}
+              height={90}
+              className="object-contain"
+              priority
+            />
+          </a>
+        </div>
 
-        {/* Right nav + CTA */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Right nav + CTA — desktop only */}
+        <div className="hidden md:flex items-center gap-6 flex-1 justify-end">
           {navRight.map((link) => (
             <a
               key={link}
@@ -58,14 +60,16 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Mobile hamburger — right side */}
+        <div className="flex md:hidden flex-1 justify-end">
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            className="text-gray-700"
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
