@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="gold-divider w-full max-w-xs" />
 
         <p className="font-sans text-xs text-gray-400 text-center">
-          &copy; 2024 Lavish Sacred Buns &amp; Sweets. All Rights Reserved.
+          &copy; 2026 Lavish Sacred Buns &amp; Sweets. All Rights Reserved.
         </p>
       </div>
     </footer>
