@@ -1,5 +1,6 @@
 import Image from "@/components/Img";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { ORDER_URL, REVIEWS_URL } from "@/lib/menu-data";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -25,7 +26,14 @@ function FooterLogo() {
   );
 }
 
-const navLinks = ["HOME", "MENU", "GALLERY", "ORDER", "ABOUT", "CONTACT"];
+const navLinks = [
+  { label: "HOME",    href: "#" },
+  { label: "MENU",    href: ORDER_URL },
+  { label: "GALLERY", href: "#gallery" },
+  { label: "ORDER",   href: ORDER_URL },
+  { label: "REVIEWS", href: REVIEWS_URL },
+  { label: "CONTACT", href: "mailto:akajacinta@yahoo.com" },
+];
 
 export default function Footer() {
   return (
@@ -39,11 +47,11 @@ export default function Footer() {
         <nav className="flex flex-wrap justify-center gap-6">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="font-sans text-xs tracking-widest uppercase text-gray-500 hover:text-pink-brand transition-colors"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -73,7 +81,7 @@ export default function Footer() {
             <a href="https://instagram.com/lavishsacredbuns" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-pink-brand hover:text-pink-deep transition-colors">
               <InstagramIcon className="w-5 h-5" />
             </a>
-            <a href="mailto:hello@lavishsacredbuns.com" aria-label="Email" className="text-pink-brand hover:text-pink-deep transition-colors">
+            <a href="mailto:akajacinta@yahoo.com" aria-label="Email" className="text-pink-brand hover:text-pink-deep transition-colors">
               <Mail className="w-5 h-5" />
             </a>
           </div>

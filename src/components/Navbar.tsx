@@ -3,9 +3,18 @@
 import { useState } from "react";
 import Image from "@/components/Img";
 import { ShoppingCart, Menu, X } from "lucide-react";
+import { ORDER_URL } from "@/lib/menu-data";
 
-const navLeft = ["HOME", "MENU", "GALLERY"];
-const navRight = ["ORDER", "ABOUT", "CONTACT"];
+const navLeft = [
+  { label: "HOME",    href: "#" },
+  { label: "MENU",    href: ORDER_URL },
+  { label: "GALLERY", href: "#gallery" },
+];
+const navRight = [
+  { label: "ORDER",   href: ORDER_URL },
+  { label: "REVIEWS", href: "https://bakesy.shop/b/lavish-sacred-sweets/reviews" },
+  { label: "CONTACT", href: "mailto:akajacinta@yahoo.com" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,11 +26,11 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-8 flex-1 pr-16">
           {navLeft.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="font-sans text-xs tracking-widest uppercase text-gray-700 hover:text-pink-brand transition-colors"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -44,15 +53,17 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 flex-1 justify-end pl-16">
           {navRight.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="font-sans text-xs tracking-widest uppercase text-gray-700 hover:text-pink-brand transition-colors"
             >
-              {link}
+              {link.label}
             </a>
           ))}
           <a
-            href="#"
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 border border-gray-300 text-gray-700 rounded-full px-5 py-2 text-xs font-sans tracking-widest uppercase hover:border-pink-brand hover:text-pink-brand transition-colors"
           >
             ORDER NOW
@@ -77,15 +88,17 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-pink-light px-6 py-4 flex flex-col gap-4">
           {[...navLeft, ...navRight].map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="font-sans text-xs tracking-widest uppercase text-gray-700"
             >
-              {link}
+              {link.label}
             </a>
           ))}
           <a
-            href="#"
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-1.5 bg-pink-brand text-white rounded-full px-5 py-2 text-sm font-sans font-semibold"
           >
             <ShoppingCart className="w-3.5 h-3.5" />

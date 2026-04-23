@@ -1,5 +1,6 @@
 import Image from "@/components/Img";
 import { Crown } from "lucide-react";
+import { ORDER_URL } from "@/lib/menu-data";
 
 export default function HeroSection() {
   return (
@@ -56,14 +57,18 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="#"
+              href={ORDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-pink-brand text-white rounded-full px-8 py-3 font-sans font-semibold text-sm hover:bg-pink-deep transition-colors shadow-md"
             >
               <Crown className="w-4 h-4" />
               ORDER NOW
             </a>
             <a
-              href="#"
+              href={ORDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 border-2 border-pink-brand text-pink-brand rounded-full px-8 py-3 font-sans font-semibold text-sm hover:bg-pink-blush transition-colors"
             >
               VIEW MENU
