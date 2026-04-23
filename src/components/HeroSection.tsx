@@ -3,7 +3,7 @@ import { Crown } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[88vh] bg-gradient-to-r from-pink-blush via-pink-blush to-pink-light overflow-hidden flex">
+    <section className="relative min-h-[88vh] overflow-hidden flex" style={{ background: "linear-gradient(135deg, #FDE8ED 0%, #F9C8D5 60%, #FDE8ED 100%)" }}>
       <div className="w-full grid lg:grid-cols-[1fr_1fr] items-stretch">
         {/* Left: text panel */}
         <div className="flex flex-col justify-center gap-6 px-10 xl:px-20 py-16 lg:py-0 z-10">

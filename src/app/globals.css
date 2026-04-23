@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
-/* Pink drip effect used at section tops/bottoms */
-.drip-top {
-  background-image: url("/images/drip-pink.svg");
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-size: auto 40px;
-  padding-top: 40px;
-}
+@theme {
+  /* Brand colors */
+  --color-pink-blush: #FDE8ED;
+  --color-pink-light: #F9C8D5;
+  --color-pink-brand: #D4567A;
+  --color-pink-deep: #B83060;
+  --color-gold: #C9A84C;
+  --color-cream: #FFF5F7;
 
-.drip-bottom {
-  background-image: url("/images/drip-pink.svg");
-  background-repeat: repeat-x;
-  background-position: bottom center;
-  background-size: auto 40px;
-  padding-bottom: 40px;
-  transform: scaleY(-1);
+  /* Fonts */
+  --font-script: var(--font-playfair), serif;
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Animations */
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.6s ease-out forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-12px); }
+  }
+
+  @keyframes fadeUp {
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
 }
 
 /* Gold divider line */
