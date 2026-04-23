@@ -14,7 +14,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center relative">
         {/* Left nav — desktop only */}
-        <nav className="hidden md:flex gap-8 flex-1">
+        <nav className="hidden md:flex gap-8 flex-1 pr-16">
           {navLeft.map((link) => (
             <a
               key={link}
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         {/* Right nav + CTA — desktop only */}
-        <div className="hidden md:flex items-center gap-6 flex-1 justify-end">
+        <div className="hidden md:flex items-center gap-6 flex-1 justify-end pl-16">
           {navRight.map((link) => (
             <a
               key={link}
