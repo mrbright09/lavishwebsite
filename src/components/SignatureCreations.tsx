@@ -1,6 +1,6 @@
 import Image from "@/components/Img";
 import { ArrowRight, Heart } from "lucide-react";
-import { flavors } from "@/lib/menu-data";
+import { flavors, ORDER_URL } from "@/lib/menu-data";
 
 export default function SignatureCreations() {
   return (
@@ -39,7 +39,9 @@ export default function SignatureCreations() {
           </p>
 
           <a
-            href="#"
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-pink-brand text-white rounded-full px-7 py-3 text-sm font-sans font-semibold hover:bg-pink-deep transition-colors w-fit shadow-sm"
           >
             EXPLORE THE MENU
@@ -50,8 +52,11 @@ export default function SignatureCreations() {
         {/* Right: flavor cards */}
         <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory lg:overflow-visible lg:pb-0">
           {flavors.map((flavor) => (
-            <div
+            <a
               key={flavor.id}
+              href={flavor.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative flex-shrink-0 w-44 lg:flex-1 rounded-2xl overflow-hidden snap-start shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             >
               <div className="aspect-[3/4]">
@@ -68,7 +73,7 @@ export default function SignatureCreations() {
                   {flavor.name}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
